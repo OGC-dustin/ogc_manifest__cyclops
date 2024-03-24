@@ -8,7 +8,7 @@
 #
 
 #
-# Normally this is called as '. ./setup-environment <builddir>'
+# Normally this is called from the base directory as '. sources/manifest/setup-environment <builddir>'
 #
 # This works in most shells (not dash), but not all of them pass the arguments
 # when being sourced.  To workaround the shell limitation use "set <builddir>"
@@ -36,7 +36,7 @@ if [ -z "$ZSH_NAME" ] && [ "$0" = "$THIS_SCRIPT" ]; then
 fi
 
 if [ -z "$OEROOT" ]; then
-    OEROOT=$(dirname "$THIS_SCRIPT"/../poky)
+    OEROOT=$(dirname "$THIS_SCRIPT/../poky")
     OEROOT=$(readlink -f "$OEROOT")
 fi
 unset THIS_SCRIPT
