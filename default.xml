@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="ogc"      fetch="git@github.com:OGC-dustin"/>
+  <remote name="rpi"      fetch="git@github.com:agherzan"/>
   <remote name="yocto"    fetch="git://git.yoctoproject.org"/>
   <remote name="oe"       fetch="git://git.openembedded.org"/>
 
@@ -8,6 +9,6 @@
 
   <project remote="ogc"        revision="kirkstone"      name="ogc_manifest__cyclops"    path="sources/manifest"/>
   <project remote="yocto"      revision="kirkstone"      name="poky"                     path="sources/poky"/>
-  <project remote="yocto"      revision="kirkstone"      name="meta-raspberrypi"         path="sources/meta-raspberrypi"/>
+  <project remote="rpi"        revision="kirkstone"      name="meta-raspberrypi"         path="sources/meta-raspberrypi"/>
   <project remote="oe"         revision="kirkstone"      name="meta-openembedded"        path="sources/meta-openembedded"/>
 </manifest>
