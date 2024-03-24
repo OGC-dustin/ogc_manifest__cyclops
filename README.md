@@ -15,5 +15,14 @@ sudo locale-gen en_US.UTF-8
 ## Yocto Development Environment
 * Use Google's repo tool to reference this manifest and get all associated repositories
 ````
-git repo init -u https://github.com/OGC-dustin/ogc_manifest__cyclops.git
+repo init -u https://github.com/OGC-dustin/ogc_manifest__cyclops.git
+repo sync
 ````
+* source the poky build environment ( will put you in the build folder )
+```
+source sources/poky/oe-init-build-env
+```
+
+
+
+## 
