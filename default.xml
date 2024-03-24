@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="yocto"    fetch="git://git.yoctoproject.org"/>
+  <remote name="oe"       fetch="git://git.openembedded.org"/>
+
+  <default sync-j="4"/>
+
+  <project remote="yocto"      revision="kirkstone"      name="poky"                 path="sources/poky"/>
+  <project remote="yocto"      revision="kirkstone"      name="meta-raspberrypi"     path="sources/meta-raspberrypi"/>
+  <project remote="oe"         revision="kirkstone"      name="meta-openembedded"    path="sources/meta-openembedded"/>
+</manifest>
