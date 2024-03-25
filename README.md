@@ -36,3 +36,7 @@ MACHINE ?= "raspberrypi"
 time bitbake core-image-minimal --runall=fetch
 time bitbake core-image-minimal
 ```
+* write final image to sdcard ( verify location before using this CLI entry )
+```
+sudo bmaptool copy tmp/deploy/images/raspberrypi/core-image-minimal-raspberrypi.wic.bz2 /dev/mmcblk0
+```
