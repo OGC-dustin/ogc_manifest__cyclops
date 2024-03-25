@@ -26,6 +26,8 @@ source sources/poky/oe-init-build-env
 * add layers ( TODO: automate when sourcing environment )
 ```
 bitbake-layers add-layer ../sources/meta-raspberrypi
+bitbake-layers add-layer ../sources/ogc_yocto_customization__hostname
+bitbake-layers add-layer ../sources/ogc_yocto_customization__psplash
 ```
 * customize machine in conf/local.conf ( TODO: automate when sourcing environment )
 ```

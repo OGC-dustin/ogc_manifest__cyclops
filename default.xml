@@ -9,6 +9,7 @@
 
   <project remote="ogc"        revision="kirkstone"      name="ogc_manifest__cyclops"                path="sources/manifest"/>
   <project remote="ogc"        revision="kirkstone"      name="ogc_yocto_customization__hostname"    path="sources/ogc_yocto_customization__hostname"/>
+  <project remote="ogc"        revision="kirkstone"      name="ogc_yocto_customization__psplash"     path="sources/ogc_yocto_customization__psplash"/>
 
   <project remote="yocto"      revision="kirkstone"      name="poky"                                 path="sources/poky"/>
   <project remote="rpi"        revision="kirkstone"      name="meta-raspberrypi"                     path="sources/meta-raspberrypi"/>
