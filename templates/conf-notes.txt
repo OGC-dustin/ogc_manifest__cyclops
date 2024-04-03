@@ -1,5 +1,8 @@
 OGC.Engineering
 
-conf-notes.txt
+sample conf-notes.txt
 
 Hello World!
+Enter your custom environment setup notes here.
+
+
