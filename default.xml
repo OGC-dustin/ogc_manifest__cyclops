@@ -8,7 +8,7 @@
   <default sync-j="4"/>
 
   <project remote="ogc"        revision="kirkstone"      name="ogc_manifest__cyclops"                path="sources/manifest">
-    <copyfile src="templates/setup-environment" dest"setup-environment" />
+    <copyfile src="templates/setup-environment" dest="setup-environment" />
   </project>
   <project remote="ogc"        revision="kirkstone"      name="ogc_yocto_customization__hostname"    path="sources/ogc_yocto_customization__hostname"/>
   <project remote="ogc"        revision="kirkstone"      name="ogc_yocto_customization__psplash"     path="sources/ogc_yocto_customization__psplash"/>
