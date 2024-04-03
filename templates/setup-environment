@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# Inspired by "probe" in oe-init-build-env
+if [ -n "$BASH_SOURCE" ]; then
+    this_script=$BASH_SOURCE
+elif [ -n $ZSH_NAME" ]; then
+    this_script=$0
+else
+    this_script="$(pwd)/setup-environment"
+fi
+
+script_dir=$(dirname "$this_script")
+script_dir=$(readlin -f "$script_dir")
+
+build_dir=${script_dir}/build
+
+if [ -n "$1" ]; then
+    build_dir=${script_dir}/$1
+fi
+
+if TEMPLATECONF=${script_dir}/sources/<recipe-repo>/templates \
+. ${script_dir}/sources/poky/oe-init-build-env ${build_dir}; then
+
+    cat << EOF;
+### The build environment is now set up ###
+
+To build the image run:
+    bitbake core-image-minimal
+    bitbake core-image-full-cmdline
+    bitbake <other-images-that-are-availabe>
+
+To build the toolchain (SDK) run:
+    bitbake -c populate_sdk <target-image>
+
+Customize the build:
+    Check conf/local.conf for available customization options.
+
+EOF
+else
+    echo "Error running oe-init-build-env. Please review your environment"
+fi
