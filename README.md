@@ -19,19 +19,9 @@ sudo locale-gen en_US.UTF-8
 repo init -u https://github.com/OGC-dustin/ogc_manifest__cyclops.git -b kirkstone -m default.xml
 repo sync
 ````
-* source the poky build environment ( will put you in the build folder ) ( TODO: customize environment as noted below )
+* source the build environment ( will put you in the build folder )
 ```
-source sources/poky/oe-init-build-env
-```
-* add layers ( TODO: automate when sourcing environment )
-```
-bitbake-layers add-layer ../sources/meta-raspberrypi
-bitbake-layers add-layer ../sources/ogc_yocto_customization__hostname
-bitbake-layers add-layer ../sources/ogc_yocto_customization__psplash
-```
-* customize machine in conf/local.conf ( TODO: automate when sourcing environment )
-```
-MACHINE ?= "raspberrypi"
+source sources/manifest/setup-environment
 ```
 * build minimal image ( fetch first, then build in case of fetch errors )
 ```
